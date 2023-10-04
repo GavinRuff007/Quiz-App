@@ -1,95 +1,39 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    const copyrightContainerStyle = {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        width: "100%",
+        background: "rgba(255, 255, 255, 0.8)", // Opacity
+      };
+      
+      const copyrightStyle = {
+        textAlign: "center",
+        fontSize: "14px",
+        color: "#333", // Text color
+        padding: "10px", // Padding around the copyright notice
+      };
+    return (
+        <main>
+            <div className="container">
+                <h1>اپلیکیشن اطلاعات عمومی </h1>
+                <div className="quiz-container">
+                <p  >در این برنامه قصد داریم تا ۱۵ سوال اطلاعات عمومی را بپرسیم که اگر بتوانید بالای ۶۰ درصد درست جواب بدهید یعنی اطلاعات عمومی خوبی دارید</p>
+                </div>
+                
+                <Link href="/quiz">
+                    <button>شروع آزمون</button>
+                </Link>
+            </div>
+            <div style={copyrightContainerStyle}>
+            <p style={copyrightStyle}> &copy; 2023 Parsa Eftekharmanesh  All rights reserved</p>
+            </div>
+        </main>
+    );
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
 }
