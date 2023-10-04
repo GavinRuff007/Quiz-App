@@ -1,5 +1,10 @@
+const pathPrefix = process.env.NODE_ENV === 'production'
+  ? '/Quiz-App'
+  : '';
+
 module.exports = {
-  trailingSlash: true,
-  basePath: '/Quiz-App',
-  assetPrefix: '/Quiz-App/',
+  assetPrefix: pathPrefix,
+  env: {
+    pathPrefix,
+  },
 };
