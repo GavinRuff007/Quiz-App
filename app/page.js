@@ -26,7 +26,7 @@ export default function Home() {
                 <p  >در این برنامه قصد داریم تا ۱۵ سوال اطلاعات عمومی را بپرسیم که اگر بتوانید بالای ۶۰ درصد درست جواب بدهید یعنی اطلاعات عمومی خوبی دارید</p>
                 </div>
                 
-                <Link href="/quiz/page">
+                <Link href="/quiz">
                     <button>شروع آزمون</button>
                 </Link>
             </div>
