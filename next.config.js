@@ -1,8 +1,5 @@
 module.exports = {
-  trailingSlash: true, // Ensures trailing slashes on all routes
-  exportPathMap: function () {
-    return {
-      '/': { page: '/' },
-    };
-  },
+  trailingSlash: true,
+  basePath: '/Quiz-App',
+  assetPrefix: '/Quiz-App/',
 };
