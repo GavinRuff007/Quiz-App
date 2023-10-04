@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import PrefixedLink from "./PrefixedLink";
 export default function Home() {
     const copyrightContainerStyle = {
         display: "flex",
@@ -25,10 +25,10 @@ export default function Home() {
                 <div className="quiz-container">
                 <p  >در این برنامه قصد داریم تا ۱۵ سوال اطلاعات عمومی را بپرسیم که اگر بتوانید بالای ۶۰ درصد درست جواب بدهید یعنی اطلاعات عمومی خوبی دارید</p>
                 </div>
-                
-                <Link href="/quiz">
-                    <button>شروع آزمون</button>
-                </Link>
+                <PrefixedLink href="/quiz"> <button>شروع آزمون</button></PrefixedLink>
+
+                    
+
             </div>
             <div style={copyrightContainerStyle}>
             <p style={copyrightStyle}> &copy; 2023 Parsa Eftekharmanesh  All rights reserved</p>
