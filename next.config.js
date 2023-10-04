@@ -4,6 +4,7 @@ const pathPrefix = process.env.NODE_ENV === 'production'
 
 module.exports = {
   assetPrefix: pathPrefix,
+  output: 'export',
   env: {
     pathPrefix,
   },
